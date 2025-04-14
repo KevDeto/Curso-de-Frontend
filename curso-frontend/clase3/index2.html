@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase N°3: Formularios y Subida al Servidor</title>
+</head>
+<body>
+    <main>
+        <h1>Formulario eh HTML</h1>
+        <section>
+            <p>Hoy nos toca un tema clave para cualquier pagina web que quiera interactuar con el usuario: los 
+                formularios. Te imaginas una web sin formularios ? Seria como entrar a un restaurante y no poder 
+                pedir la comida. Los formularios son el puente entre lo que quiere el usuario y lo que el sitio 
+                tiene para ofrecer.
+            </p>
+        </section>
+        <section>
+            <h2>La estructura basica del formulario</h2>
+            <p>
+                El formulario en HTML es basicamente una serie de cajitas donde el usuario mete sus datos. Imaginate 
+                que es como un formulario en papel, pero en version digital. La idea es que llenás esos datos y los 
+                mandas a un servidor, que los procesa (como cuando mandas una carta, pero mucho mas rapido). 
+            </p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"><br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido"><br>
+                <label for="direccion">Direccion:</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Escribe tu direccion"><br>
+                <label for="email">Correo Electronico</label>
+                <input type="email" name="email" id="email" placeholder="Escribe tu email"><br>
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono" id="telefono" placeholder="Escribe tu numero">              
+            </form>
+            <p>
+                Así que en términos simples, un formulario arranca así:
+            </p>
+        </section>
+        <section>
+            <h2>Estructura basica de un formulario en codigo:</h2>
+            <pre>
+                <code>
+                    &lt;form action="URL_de_destino" method="POST"&gt;
+                        &lt;input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"&gt;
+                        &lt;input type="email" name="email" id="email" placeholder="Escribe tu email"&gt;
+                        &lt;textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje"&gt;
+                        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                    &lt;/form&gt;
+                </code>
+            </pre>
+            <p>
+                Facil, no? La idea basica es que tenes una etiqueta &lt;forms&gt; que agrupa todo, y adentro metes los campos: 
+                texto, correo, mensaje, y un boton para enviar. Cuando haces clic en el boton. Listo! La info se va volando al 
+                servidor. 
+            </p>
+        </section>
+        <section>
+            <h3>Atributos del formulario:</h3>
+            <ul>
+                <li><strong>action</strong>: Define la URL a la que se enviaran los datos del formulario.</li>
+                <li><strong>method</strong>: Especifica el metodo de envio de datos (comunmente <strong>GET</strong> o 
+                <strong>PORT</strong>).</li>
+            </ul>
+            <h3>Campos basicos de un formulario:</h3>
+            <p>Label: Se utiliza para etiquetar un campo del formulario.</p>
+            <pre>
+                <code>
+                    &lt;label for="nombre"&gt;Nombre&lt;/label&gt;
+                </code>
+            </pre>
+            <ul>
+                <li><strong>Input</strong>: Campo de entrada de datos.</li>
+                <ul>
+                    <li><strong>type="text"</strong>: Campo de texto</li>
+                    <li><strong>type="email"</strong>: Campo para ingresar correos electronicos.</li>
+                    <li><strong>type="password"</strong>: Campo de contraseñas, el texto se oculta.</li>
+                    <li><strong>type="checkbox"</strong> y <strong>type="radio"</strong>: campos para seleccionar opciones.</li>
+                    <li><strong>type="submit"</strong>: Boton para enviar el formulario.</li>
+                </ul>
+            </ul>
+            <p>Textarea: campo para ingresar texto en multiples lineas.</p>
+            <pre>
+                <code>
+                    &lt;textarea name="mensaje" rows="4" cols="50"&gt;&lt;/textarea&gt;
+                </code>
+            </pre>
+            <p>Select y Option: Menu desplegable para seleccionar una opcion.</p>
+            <pre>
+                <code>
+                    &lt;elect name="opciones"&gt;
+                        &lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;
+                        &lt;option value="opcion2"&gt;Opción 2&lt;/option&gt;
+                    &lt;/select&gt;
+                </code>
+            </pre>
+            <p>
+                Validaciones y tipos de inputs: Los formularios permiten la validacion automatica mediante atributos como 
+                <strong>required</strong> para campos obligatorios, <strong>minlength</strong> y <strong>maxlength</strong> 
+                para definir la longitud del texto, y <strong>pattern</strong> para expresiones regulares.
+            </p>
+            <p>
+                Uso de Formspree: Formspree es un servicio que permite enviar formularios sin necesidad de configurar un
+                servidor. Solo es necesario incluir la URL proporcionada por Formspree en el atributo <strong>action</strong>
+                del formulario.
+            </p>
+            <h3>Paso a paso para integrar un Formspree:</h3>
+            <ol>
+                <li>Registrarse en Formspree: Crear una cuenta gratuita en https://formspree.io/</li>
+                <li>Crear un formulario: Añadir el HTML proporcionado por Formspree.</li>
+                <li>Configuracion: Cambiar la accion del formulario al URL generado por Formspree.</li>
+                <li>Prueba del formulario: Enviar un mensaje y verificar que llegue al correo configurado en Formspree.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

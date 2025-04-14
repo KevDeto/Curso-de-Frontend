@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="aprende sobre los enlaces en html, como usar la etiqueta 
+    &lt;a&gt; y el atributo 'href' para crear hipervinculos efectivos en tu pagina web."> 
+    <title>Guia completa sobre enlaces en HTML | Aprendiendo Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegacion principal">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/html">Html</a></li>
+                <li><a href="/css">Css</a></li>
+                <li><a href="/javascript">Javascript</a></li>
+                <li><a href="index3.html">Pagina siguiente</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Enlaces en HTML</h1>
+ 
+            <section>
+                <h2>introduccion a los enlaces</h2>
+                <p>
+                    Los enlaces (<code>&lt;a&gt;</code>) - o mas conmunmente conocidos por su termino en ingles "links" - son 
+                    fundamentales para la navegacion en la web. Los hipervinculos permiten a quienes navegan por un sitio web 
+                    moverse entre diferentes paginas y recursos. Veamos algunos ejemplos de como funciona esta etiqueta. 
+                </p>
+            </section>
+            <section>
+                <h2>Ejemplos de enlaces</h2>
+                <p>Veamos algunos ejemplos de como funciona esta etiqueta:</p>
+                <ul>
+                    <li>
+                        <h3>Enlaces a otra paginas de sitio:</h3>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;a href= "https://www.ejemplo.com"&gl;Visita nuestro sitio web&lt;/a&gt;</code></pre>
+                    </li>
+                    <li>
+                        <h3>Enlaces a direcciones de correos electronicos:</h3>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;a href= "mailtoinfo@ejemplo.com"&gt;Enviar correo&lt;/a&gt;</code></pre>
+                    </li>
+                    <li>
+                        <h3>Enlaces archivos:</h3>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;a href="documento.pdf" download&gtDescargar elemento&lt;/a&gt;</code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Que es HREF en HTML?</h2>
+                <p>
+                    El atributo<code>href</code> (hypertext reference) se utiliza en la etiqueta <code>&lt;a&gt;</code> 
+                    para definir el destino de un enlace HTML. Es el responsable de indicar la URL o la ruta a la que se 
+                    dirigira el usuario al hacer clic en el enlace. El valor de <code>href</code> puede ser una URL completa 
+                    (ruta absoluta) o una ruta relativa a un archivo en el mismo servidor.
+                </p>
+            </section>
+            <section>
+                <h2>Para que funciona HREF?</h2>
+                <ul>
+                    <li>Permite crear enlaces que redirigen a otras paginas web, archivos, secciones dentro de la misma 
+                        pagina, o incluso direcciones de correo electronico.
+                    </li>
+                    <li>
+                        Es fundamental para la navegacion en sitios web, ya que conecta diferentes recursos.
+                    </li>
+                </ul>
+                <h3>Ejemplo de uso:</h3>
+                <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visitar Ejemplo&lt;/a&gt;</code></pre>
+                <p>Este enlce lleva al usuario a "www.ejemplo.com"</p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2023 Aprendiendo Frontend. Todos los derechos reservados.</p>
+        <nav aria-label="Navegación secundaria">
+            <ul>
+                <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="/terminos">Términos de Servicio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
