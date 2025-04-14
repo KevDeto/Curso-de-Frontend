@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio practico #1</title>
+</head>
+<body>
+    <main>
+        <h1>Crear un formulario de contacto</h1>
+        <section>
+            <h2>Pasos a seguir:</h2>
+            <dl>
+                <li>
+                    Dentro de la seccion &lt;main&gt;, crea un formulario de contacto utilizando Formspree. El formulario
+                    debe incluir los siguientes campos:
+                </li>
+                <ul>
+                    <li>Nombre (&lt;input type="text"&gt;)</li>
+                    <li>Correo electronico (&lt;input type="email"&gt;)</li>
+                    <li>Mensaje (&lt;textarea&gt;)</li>
+                </ul>
+            </dl>
+        </section>
+        <section>
+            <h2>Resolucion:</h2>
+            <form action="https://formspree.io/f/mwplygob" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required><br>
+                <label for="correo">Correo electronico:</label>
+                <input type="email" name="correo" id="correo" placeholder="Ingrese su email" required><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea name="mensaje" rows="4" cols="50" required></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
