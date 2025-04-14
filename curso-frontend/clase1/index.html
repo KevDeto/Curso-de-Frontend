@@ -3,39 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre para pestaña</title>
+    <title>Clase N°1 Conceptos Basicos de HTML</title>
 </head>
 <body>
     <header>
-        encabezado de una pagina o seccion. Contiene logos, titulos y menu de navegacion.
-        <h1>Este es el encabezado principal (rango h1)</h1>
-        <h2>Este es un subtitulo (rango h2)</h2>
-        <h3>Este es otro subtitulo (rango h3)</h3>
+        <h1>Conceptos basicos de HTML</h1>
     </header>
-    <nav>
-        representa una seccion de navegacion con enlaces a otras partes de la pagina o a diferentes paginas.
-    </nav>
     <main>
-        contiene el contenido principal del documento, que es unico y escencial para la pagina.
-        <p>
-            Este es un parrafo de introduccion sobre el proyecto. Aqui podemos usar <strong>negrita</strong> 
-            , <em>cursiva</em>, y <s>tachado</s>.
-        </p>
+        <section>
+            <h2>Temario</h2>
+            <ol>
+                <li>
+                    <h3>Conceptos basicos sobre Full Stack</h3>
+                    <ul>
+                        <li>Explicacion general de Full Stack y las areas que abarca.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Diferencias entre Front-End y Back-End</h3>
+                    <ul>
+                        <li>Comparacion entre las responsabilidades y tecnologias de Front-End y Back-End.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Herramientas y tecnologias utilizadas en cada area</h3>
+                    <ul>
+                        <li>Tecnologias clave en Front-End (HTML, CSS, JS, etc.) y Back-End (Bases de Datos, Servidores, APIs, etc.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Instalacion y configuracion de Visual Studio Code</h3>
+                    <ul>
+                        <li>Introduccion a Visual Studio Code como herramienta principal de desarrollo.</li>
+                        <li>Paso a paso para la instalacion y configuracion basica de Visual Studio Code.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Introduccion a HTML</h3>
+                    <ul>
+                        <li>Que es HTML y cual es su funcion en el desarrollo web?.</li>
+                        <li>Diferencias entre una pagina web y un sitio web.</li>
+                        <li>Importancia del estandar HTML5.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Etiquetas Semanticas en HTML</h3>
+                    <ul>
+                        <li>Para que son las etiquetas semanticas?</li>
+                        <li>Para que sirven?</li>
+                        <li>Ejemplos y uso de etiquetas semanticas (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, 
+                            <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, 
+                            <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code></li>
+                        <li>Encabezados (&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, ...)</li>
+                        <li>Parrafos (<code>&lt;p&gt;</code>)</li>
+                        <li>Negrita (<code>&lt;strong&gt;</code>)</li>
+                        <li>Italica (<code>&lt;em&gt;</code>)</li>
+                        <li>Tachado (<code>&lt;s&gt;</code>)</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Conceptos basicos sobre Full Stack</h2>
+            <h3>Que es Full Stack?</h3>
+            <p>
+                El termino "Full Stack" se refiere a la capacidad de un desarrollador para trabajar en todas las capas de una 
+                aplicacion web, desde la interfaz de un usuario (Front-End) hasta la logica del servidor y la base de datos 
+                (Back-End).
+            </p>
+            <p>
+                Un desarrollador o desarrolladora Full Stack tiene conocimientos en varias tecnologias y herramientas que le 
+                permiten construir aplicaciones completas, abarcando desde la experiencia del usuario hasta la gestion de 
+                datos y la logica del servidor. Comprende el flujo completo de desarrollo de una aplicacion  web, lo que le 
+                permite tener una vision global del proyecto y la capacidad de solucionar problemas que puedan surgir en 
+                cualquier parte del stack.
+            </p>
+        </section>
+        <section>
+            <h2>Diferencias entre Front-End y Back-End</h2>
+            <h3>Front-End:</h3>
+            <p>
+                El Front-End es la parte de una aplicacion web que interactua directamente con la persona, todo lo que ella ve. 
+                El desarrollo Front-End involucra la creacion de interfaces de usuario utilizando tecnologias como HTML, CSS y 
+                JavaScript.
+            </p>
+            <ul>
+                <li>HTML: Proporciona la estructura basica de la pagina web.</li>
+                <li>CSS: Se utilizaba para aplicar estilos a la estructura HTML, como colores, fuentes y distribucion de la pagina.</li>
+                <li>JavaScript: Añade interactividad a la pagina, permitiendo que los elementos respondan a acciones de la persona, 
+                    como clics y desplazamientos.</li>
+            </ul>
+            <h3>Back-End:</h3>
+            <p>
+                El Back-End es la parte de una aplicacion web que gestiona la logica del servidor, las bases de datos y las 
+                interacciones entre el servidor y el cliente. Se encarga de procesar solicitudes, ejecutar operaciones en la base 
+                de datos y devolver respuestas al Front-End.
+            </p>
+            <ul>
+                <li>Servidor Web: recibe las solicitudes del cliente (navegador) y las procesa. Esto puede involucrar la ejecucion 
+                    de scripts, la gestion de sesiones de usuario y la interaccion con bases de datos.</li>
+                <li>Base de Datos: aqui es donde se almacenan los datos de la aplicacion, como la informacion de usuarios/as, 
+                    productos, y transacciones.</li>
+                <li>Lenguajes de Programacion: El Back-End suele desarrollarse utilizando lenguajes como Python, Java, PHP, 
+                    Node.JS, entre otros.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Herramientas y tecnologias en Front-End</h2>
+            <ul>
+                <li>HTML, CSS, y JavaScript: Las tecnologias fundamentales para la creacion de la interfaz de usuario.</li>
+                <li>Frameworks y Librerias: Herramientas como React, Angular o Vue.js ayudan a construir aplicaciones 
+                    mas complejas y dinamicas.</li>
+                <li>Preprocesadores de CSS: Sass o Less permiten escribir CSS de manera mas eficiente y organizada.</li>
+                <li>Control de versiones: Git es escencial para el control de versiones, permitiendo a los desarrolladores
+                    ralizar un seguimiento de los cambios de su codigo.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Herramientas y tecnologias en Back-End</h2>
+            <ul>
+                <li>Lenguajes de programacion: Python, Java, PHP, Ruby, Node.js.</li>
+                <li>Bases de Datos: MySQL, PostgreSQL, MongoDB, SQL Server.</li>
+                <li>Frameworks: Django, Ruby on Rails, Express.js.</li>
+                <li>Servidores: Apache, Nginx, o servidores en la nube como AWS y Azure.</li>
+                <li>APIs y RESTful Services: Creación de APIs para interactuar con el Front-End y otras aplicaciones.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Instalacion y configuracion de Visual Studio Code</h2>
+            <h3>Paso 1: Descarga e Instalación</h3>
+            <ul>
+                <li>Visitá el sitio oficial de Visual Studio Code: 
+                    <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+                <li>Descargá la versión correspondiente a tu sistema operativo (Windows, macOS,
+                    Linux).</li>
+                <li>Seguí las instrucciones de instalación en pantalla. El proceso es sencillo y no requiere configuración 
+                    especial.</li>
+            </ul>
+            <h3>Paso 2: Configuración Básica</h3>
+            <ul>
+                <li>Abrir Visual Studio Code: Una vez instalado, abrí el editor.</li>
+                <li>
+                    Configurar Preferencias:
+                    <ul>
+                        <li>Ve a File > Preferences > Settings.</li>
+                        <li>Desde aquí, podés personalizar el tema, fuentes, y otros aspectos visuales.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </main>
     <footer>
-        define el pie de pagina, donde generalmente se encuentran los derechos de autor, enlaces adicionales, contactos.
-        <p>
-            Este es el pie de pagina con la informacion de contacto
-        </p>
+
     </footer>
-    <section>
-        define una seccion tematica en el contenido que agrupa elementos relacionados.
-    </section>
-    <article>
-        representa una pieza autonoma de contenido, como un articulo de un blog o una noticia.
-    </article>
-    <aside>
-        contiene informacion adicional que puede estar relacionada con el contenido principal, como anuncios o enlaces secundarios.
-    </aside>
 </body>
 </html>
