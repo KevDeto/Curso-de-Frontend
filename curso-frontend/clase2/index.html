@@ -3,38 +3,487 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clase N° 2: Listas, Enlaces, Multimedia y Tablas</title>
 </head>
 <body>
     <header>
-        <h1>Listas y enlaces.</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Pagina Principal</a></li>
+                <li><a href="./practica/ejercicios.html">Practica #2</a></li>
+            </ul>
+        </nav>
+        <h1>Listas, Enlaces, Multimedia y Tablas</h1>
     </header>
     <main>
-        Las listas en HTML se utilizan para agrupar elementos relacionados de manera ordenada o 
-        desordenada. Existen tres tipos principales de listas en HTML.
-        <p>
-            Tipos de listas en HTML:
-            <ol>
-                <li>Listas ordenadas:</li>
-                <p>
-                    Este tipo de lista numera automaticamente cada elemento de la misma. Es de gran utilidad 
-                    de los elementos es relevante para la programacion.
-                </p>
-            </ol>
+        <section>
+            <h2>Temario:</h2>
             <ul>
-                <li>Listas desordenadas:</li>
-                <p>
-                    Este tipo de lista ubicara los elementos con viñetas, sin importar el orden de aparicion 
-                    de los mismos.
-                </p>
+                <li>
+                    <h3>Listas y Enlaces</h3>
+                    <ul>
+                        <li>Tipos de Listas en HTML</li>
+                        <li>Creación de Enlaces en HTML</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Rutas Absolutas y Relativas</h3>
+                    <ul>
+                        <li>Diferencias entre rutas absolutas y relativas.</li>
+                        <li>Mejores prácticas para organizar los archivos de un proyecto web utilizando
+                            rutas relativas.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Elementos en Bloque y en Linea</h3>
+                    <ul>
+                        <li>Características y ejemplos de elementos en bloque.</li>
+                        <li>Características y ejemplos de elementos en línea.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Multimedia con HTML</h3>
+                    <ul>
+                        <li>Inserción de Imagenes</li>
+                        <li>Inserción de Audio</li>
+                        <li>Inserción de Video</li>
+                        <li>Uso de Iframes</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Accesibilidad en Multimedia</h3>
+                    <ul>
+                        <li>Atributos alt y Subtítulos en Video</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Tablas en HTML</h3>
+                    <ul>
+                        <li>Estructura Básica de una Tabla
+                            <ul>
+                                <li>Uso de las etiquetas &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, y &lt;th&gt;.</li>
+                            </ul>
+                        </li>
+                        <li>Combinar Celdas en Tablas
+                            <ul>
+                                <li>Uso de los atributos colspan y rowspan para combinar celdas en tablas.</li>
+                            </ul>
+                        </li>
+                        <li>Buenas Prácticas en el Uso de Tablas
+                            <ul>
+                                <li>Consejos para mantener las tablas accesibles y bien estructuradas</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-            <dl>
-                <dt>Listas de definicion:</dt>
-                <dd>Estas listas se utilizan para definir terminos y descripciones. Cada termino &lt;dt&gt; 
-                    puede tener una o mas descripciones &lt;dd&gt;.
-                </dd>
-            </dl>
-        </p>
+        </section>
+        <section>
+            <h2>Listas y enlaces.</h2>
+            <p>
+                Las listas en HTML se utilizan para agrupar elementos relacionados de manera ordenada o 
+                desordenada. Existen tres tipos principales de listas en HTML:
+            </p>
+            <h3>Tipos de listas en HTML:</h3>
+            <ul>
+                <li>
+                    Listas ordenadas (&lt;ol&gt;): Este tipo de lista numera automáticamente cada
+                    elemento de la misma. Es de gran utilidad cuando el orden de los elementos es
+                    relevante para la programación.                        
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;ol&gt;
+                                &lt;li&gt;Encender la computadora&lt;/li&gt;
+                                &lt;li&gt;Abrir el navegador&lt;/li&gt;
+                                &lt;li&gt;Acceder al sitio web&lt;/li&gt;
+                            &lt;/ol&gt;
+                        </code>
+                    </pre>
+                </div>
+                <li>
+                    Listas desordenadas (&lt;ul&gt;): Este tipo de lista ubicará los elementos con viñetas,
+                    sin importar el orden de aparición de los mismos.
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;ul&gt;
+                                &lt;li&gt;Pantalla de 15 pulgadas&lt;/li&gt;
+                                &lt;li&gt;Batería de larga duración&lt;/li&gt;
+                                &lt;li&gt;Procesador Intel i7&lt;/li&gt;
+                            &lt;/ul&gt;                              
+                        </code>
+                    </pre>
+                </div>
+                <li>
+                    Listas de definición (&lt;dl&gt;): Estas listas se utilizan para definir términos y
+                    descripciones. Cada término (&lt;dt&gt;) puede tener una o más descripciones (&lt;dd&gt;).    
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;dl&gt;
+                                &lt;dt&gt;HTML&lt;/dt&gt;
+                                &lt;dd&gt;Lenguaje de marcado utilizado para estructurar contenido en la
+                                    web.&lt;/dd&gt;
+                                &lt;dt&gt;CSS&lt;/dt&gt;
+                                &lt;dd&gt;Lenguaje utilizado para aplicar estilos y diseño a las páginas
+                                    web.&lt;/dd&gt;
+                               &lt;dt&gt;JavaScript&lt;/dt&gt;
+                               &lt;dd&gt;Lenguaje de programación utilizado para añadir interactividad a
+                                    las páginas web.&lt;/dd&gt;
+                            &lt;/dl&gt;
+                        </code>
+                    </pre>
+                </div>
+            </ul>
+        </section>
+        <section>
+            <h2>Enlaces en HTML</h2>
+            <p>
+                Los enlaces (<code>&lt;a&gt;</code>) - o mas conmunmente conocidos por su termino en ingles "links" - son 
+                fundamentales para la navegacion en la web. Los hipervinculos permiten a quienes navegan por un sitio web 
+                moverse entre diferentes paginas y recursos. Veamos algunos ejemplos de como funciona esta etiqueta. 
+            </p>
+            <h3>Ejemplos de enlaces</h3>
+            <p>Veamos algunos ejemplos de como funciona esta etiqueta:</p>
+            <ul>
+                <li>
+                    Enlaces a otra paginas de sitio:
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;a href= "https://www.ejemplo.com"&gl;Visita nuestro sitio web&lt;/a&gt;
+                        </code>
+                    </pre>
+                </div>
+                <li>
+                    Enlaces a direcciones de correos electronicos:
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;a href= "mailtoinfo@ejemplo.com"&gt;Enviar correo&lt;/a&gt;
+                        </code>
+                    </pre>
+                </div>
+                <li>
+                    Enlaces archivos:
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;a href="documento.pdf" download&gtDescargar elemento&lt;/a&gt;
+                        </code>
+                    </pre>
+                </div>
+            </ul>
+            <h3>Que es HREF en HTML?</h3>
+            <p>
+                El atributo<code>href</code> (hypertext reference) se utiliza en la etiqueta <code>&lt;a&gt;</code> 
+                para definir el destino de un enlace HTML. Es el responsable de indicar la URL o la ruta a la que se 
+                dirigira el usuario al hacer clic en el enlace. El valor de <code>href</code> puede ser una URL completa 
+                (ruta absoluta) o una ruta relativa a un archivo en el mismo servidor.
+            </p>
+            <h3>Para que funciona HREF?</h3>
+            <ul>
+                <li>Permite crear enlaces que redirigen a otras paginas web, archivos, secciones dentro de la misma 
+                    pagina, o incluso direcciones de correo electronico.</li>
+                <li>
+                    Es fundamental para la navegacion en sitios web, ya que conecta diferentes recursos.</li>
+            </ul>
+            <h4>Ejemplo de uso:</h4>
+            <pre>
+                <code>
+                    &lt;a href="https://www.ejemplo.com"&gt;Visitar Ejemplo&lt;/a&gt;
+                </code>
+            </pre>
+            <p>Este enlace lleva al usuario a "<a href="https://www.ejemplo.com">www.ejemplo.com</a>"</p>
+        </section>
+            <h2>Rutas absolutas y relativas.</h2>
+            <p>
+                Las rutas son escenciales para enlazar correctamente archivos, imagenes, estilos y scripts 
+                en una pagina web. Hay dos tipos de rutas principales:
+            </p>
+            <ul>
+                <li>
+                    Rutas absolutas:
+                    <ul>
+                        <li>Una ruta absoluta especifica la ubicacion completa de un archivo desde la raiz del servidor. 
+                            Siempre comienza con "http://" o "https://" y permite dirigir a sitios web externos al sitio 
+                            web.</li>
+                        <div>
+                            <h4>Ejemplo:</h4>
+                            <pre>
+                                <code>
+                                    &lt;a href="https://www.ejemplo.com/imagen.jpg"&gt;VerImagen&lt;/a&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </ul>
+                <li>
+                    Rutas relativas:
+                    <ul>
+                        <li>Una ruta relativa se basa en la ubicacion del archivo HTML actual. Es mas flexible, ya que 
+                            se adapta a cambios en la estructura de las carpetas.</li>
+                        <div>
+                            <h4>Ejemplo:</h4>
+                            <pre>
+                                <code>
+                                    &lt;a href="imagenes/imagen.jpg"&gt;Ver imagen&lt;/a&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Organizacion de archivos</h3>
+            <ul>
+                <li>
+                    Buenas practicas. A continuación enumeramos una serie de procedimientos a la
+                    hora de gestionar el desarrollo de tus sitios web que constituyen “buenas prácticas”
+                    (acuerdos dentro de la comunidad de desarrolladores y desarrolladoras sobre cómo
+                    llevar adelante de forma ordenada y prolija el trabajo en software)
+                    <ul>
+                        <li>Colocar las imágenes a utilizar en una carpeta separada (imagenes/ o images/).</li>
+                        <li>Guardar los estilos en una carpeta css/ y los scripts en una carpeta js/.</li>
+                        <li>Utilizar rutas relativas para facilitar la movilidad dentro del proyecto.</li>
+                    </ul>                    
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Elementos en bloque y en línea</h2>
+            <h3>Elementos en bloque (block)</h3>
+            <p>
+                Los elementos en bloque siempre empiezan en una nueva línea de código y ocupan todo el 
+                ancho disponible. Estos elementos suelen usarse para estructurar secciones completas de 
+                contenido. Veamos algunos casos:
+            </p>
+            <ul>
+                <li>
+                    Ejemplos comunes:
+                    <ul>
+                        <li>&lt;div&gt; Un contenedor genérico para agrupar elementos. No es tan
+                            recomendable su uso al no implicar la utilización de etiquetas semánticas.</li>
+                        <li>&lt;h1&gt; - &lt;h6&gt;: Encabezados de diferentes niveles.</li>
+                        <li>&lt;p&gt;: Define un párrafo.</li>
+                        <li>&lt;ul&gt; y &lt;ol&gt;: Listas, sean ordenadas o desordenadas.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Elementos en línea (inline)</h3>
+            <p>
+                Los elementos en línea no implican un salto de línea en el código sino que sólo ocupan el
+                espacio que necesitan para desplegarse. Se utilizan para definir partes de un texto o
+                elementos pequeños.
+            </p>
+            <ul>
+                <li>
+                    Ejemplos comunes:
+                    <ul>
+                        <li>&lt;span&gt;: Un contenedor genérico para agrupar texto.</li>
+                        <li>&lt;a&gt;: Enlaces</li>
+                        <li>&lt;strong&gt;: Aplica al texto el estilo negrita.</li>
+                        <li>&lt;em&gt;: Aplica al texto el estilo cursiva.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Multimedia con HTML</h2>
+            <h3>Inserción de imágenes</h3>
+            <p>
+                Las imágenes se insertan en HTML utilizando la etiqueta <img>. Es fundamental siempre
+                proporcionar un texto alternativo con el atributo alt para mejorar la accesibilidad. ¿A qué
+                nos referimos con esto? Cuando las personas que accedan a nuestro sitio web apoyen el
+                cursor sobre nuestras imágenes podrán leer la descripción de la imagen gracias al atributo
+                alt, o incluso en caso de romperse, si se perdiera la imagen podrán visualizar el texto que
+                seleccionamos para ella.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;img src="imagen.jpg" alt="Descripción de la imagen" width="600" height="400"&gt;
+                </code>
+            </pre>
+            <h3>Insercion de audio</h3>
+            <p>
+                HTML5 permite insertar archivos de audio directamente en la página web utilizando la 
+                etiqueta &lt;audio&gt;.
+            </p>
+            <ul>
+                <li>Atributos comunes:
+                    <ul>
+                        <li>controls: Muestra los controles de reproduccion.</li>
+                        <li>autoplay: Reproduce automaticamente el audio al cargar la pagina.</li>
+                        <li>loop: Reproduce el audio en una repeticion continua.</li>
+                    </ul>
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;audio controls&gt;<br>
+                                &lt;source src="audio.mp3" type="audio/mpeg&gt;<br>
+                                <em>Tu navegador no soporta la reproduccion de audio.</em><br>
+                            &lt;/audio&gt;
+                        </code>
+                    </pre>
+                </div>
+            </ul>
+            <h3>Insercion de video</h3>
+            <p>
+                Los videos tambien se pueden insertar en HTML5 utilizando etiquetas &lt;video&gt;.
+            </p>
+            <ul>
+                <li>
+                    Atributos comunes:
+                    <ul>
+                        <li>controls: Muestra los controles de reproduccion.</li>
+                        <li>poster: Muestra una imagen antes de que se reproduzca el video.</li>
+                        <li>autoplay: Reproduce automaticamente el video al cargar la pagina.</li>
+                        <p>
+                            <span><strong>¡Atencion con este atributo!</strong></span> No siempre es recomendable 
+                            utilizarlo ya que no se considera una buena experiencia de usuario que automaticamente se 
+                            reproduzcan todos los videos de una pagina web. Deberemos utilizar nuestro criterio 
+                            al asignarlo.
+                        </p>
+                    </ul>
+                </li>
+                <div>
+                    <h4>Ejemplo:</h4>
+                    <pre>
+                        <code>
+                            &lt;video controls poster="preview.jpg" width="600" heigth"400"&gt;<br>
+                                &lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                                <em>Tu navegador no soporta la reproduccion de video.</em><br>
+                            &lt;/video&gt;
+                        </code>
+                    </pre>
+                </div>
+            </ul>
+            <h3>Uso de iframes</h3>
+            <p>
+                La etiqueta &lt;iframe&gt; permite insertar otro documento HTML, como un mapa 
+                de google o un video de YouTube, dentro de la pagina.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" 
+                    heigth="315" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Accecibilidad en Multimedia</h2>
+            <h3>Atributos <strong>alt</strong> y subtitulos en video</h3>
+            <p>
+                Es crucial para la accesibilidad que todas las imagenes incluyan un atributo 
+                <strong>alt</strong> que describa su contenido. Para videos, se deben añadir 
+                subtitulos utilizando la etiqueta &lt;track&gt;.
+            </p>
+            <h4>Ejemplo para imagenes:</h4>
+            <pre>
+                <code>
+                    &lt;img src="imagen.jpg" alt="Descripcion detallada de la imagen"&gt;
+                </code>
+            </pre>
+            <h4>Ejemplo para subtitulos en video:</h4>
+            <pre>
+                <code>
+                    &lt;video controls&gt;
+                        &lt;source src="video.mp4" type="video/mp4"&gt;
+                        &lt;track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+                    &lt;/video&gt;
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Tablas en HTML</h2>
+            <h3>Estructura basica de una tabla</h3>
+            <p>
+                Las tablas en HTML se construyen utilizando la etiqueta &lt;table&gt;. Dentro de esta, 
+                se definen las filas con &lt;tr&gt; y las celdas con &lt;td&gt; para datos normales 
+                o &lt;th&gt; para encabezados.
+            </p>
+            <pre>
+                <code>
+                    &lt;table&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Nombre&lt;/th&gt;
+                            &lt;th&gt;Edad&lt;/th&gt;
+                            &lt;th&gt;Ciudad&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Ana&lt;/td&gt;
+                            &lt;td&gt;25&lt;/td&gt;
+                            &lt;td&gt;Madrid&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Juan&lt;/td&gt;
+                            &lt;td&gt;30&lt;/td&gt;
+                            &lt;td&gt;Barcelona&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;                           
+                </code>
+            </pre>
+            <h3>Combinar celdas con tablas</h3>
+            <p>
+                Se pueden combinar celdas en tablas utilizando los atributos <strong>colspan</strong> 
+                y <strong>rowspan</strong>.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;table&gt;
+                        &lt;tr&gt;
+                            &lt;th rowspan="2"&gt;Nombre&lt;/th&gt;
+                            &lt;th colspan="2"&gt;Contacto&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Teléfono&lt;/td&gt;
+                            &lt;td&gt;Email&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Ana&lt;/td&gt;
+                            &lt;td&gt;123456789&lt;/td&gt;
+                            &lt;td&gt;ana@ejemplo.com&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Buenas practicas en el uso de tablas</h2>
+            <ul>
+                <li>
+                    Mantener las tablas accesibles:
+                    <ul>
+                        <li>Usar <stron>scope</stron> en &lt;th&gt; para mejorar la accesibilidad.</li>
+                        <li>Incluir un resumen o descripcion para tablas complejas utilizando el 
+                            atributo <strong>summary</strong>.</li>
+                    </ul>
+                </li>
+                <li>
+                    Estructurar las tablas correctamente:
+                    <ul>
+                        <li>Evitar tablas anidadas (una tabla dentro de otra), ya que pueden complicar 
+                            la accesibilidad y el mantenimiento del codigo.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>

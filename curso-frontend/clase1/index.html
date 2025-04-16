@@ -7,6 +7,12 @@
 </head>
 <body>
     <header>
+        <nav aria-label="Navegacion">
+            <ul>
+                <li><a href="../../index.html">Pagina Principal</a></li>
+                <li><a href="./practica/ejercicios.html">Practica #1</a></li>
+            </ul>
+        </nav>
         <h1>Conceptos basicos de HTML</h1>
     </header>
     <main>
@@ -266,11 +272,119 @@
             </pre>
         </section>
         <section>
-            
+            <h2>Etiquetas basicas mas comunes en HTML</h2>
+            <h3>Encabezados (&lt;h1&gt; - &lt;h6&gt;)</h3>
+            <p>
+                Los encabezados son utilizados para definir títulos y subtítulos en una página web. HTML
+                soporta seis niveles de encabezados, donde &lt;h1&gt; es el más importante y &lt;h6&gt; 
+                el menos relevante.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;h1&gt;Este es el encabezado principal&lt;/h1&gt;
+                    &lt;h2&gt;Este es un subtítulo&lt;/h2&gt;
+                    &lt;h3&gt;Este es otro subtítulo&lt;/h3&gt;
+                </code>
+            </pre>
+            <h3>Párrafos (&lt;p&gt;)</h3>
+            <p>
+                La etiqueta &lt;p&gt; se utiliza para definir párrafos de texto. Es una de las etiquetas más
+                utilizadas en HTML para organizar contenido textual.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;p&gt; 
+                        Esto un párrafo. Aquí podés escribir cualquier texto que desees
+                        mostrar en tu página.
+                    &lt;/p&gt;                        
+                </code>
+            </pre>
+            <h3>Negrita (&lt;strong&gt;)</h3>
+            <p>
+                La etiqueta &lt;strong&gt; se utiliza para resaltar texto con importancia, mostrándolo en negrita.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;p&gt;Este es un &lt;strong&gt;texto en negrita&lt;/strong&gt;.&lt;/p&gt;
+                </code>
+            </pre>
+            <h3>Itálica (&lt;em&gt;)</h3>
+            <p>
+                La etiqueta &lt;em&gt; se utiliza para enfatizar texto, mostrándolo en cursiva.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;p&gt;Este es un &lt;em&gt;texto en cursiva&lt;/em&gt;.&lt;/p&gt;
+                </code>
+            </pre>
+            <h3>Tachado (&lt;s&gt;)</h3>
+            <p>
+                La etiqueta &lt;s&gt; se utiliza para mostrar texto tachado, generalmente para indicar que algo
+                ha sido eliminado o corregido.
+            </p>
+            <h4>Ejemplo:</h4>
+            <pre>
+                <code>
+                    &lt;p&gt;Este es un &lt;s&gt;texto tachado&lt;/s&gt;.&lt;/p&gt;
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Integración de Etiquetas Básicas en el Proyecto:</h2>
+            <ul>
+                <li>En el &lt;header&gt;: agrega un título principal usando &lt;h1&gt;, seguido de un subtítulo
+                    con &lt;h2&gt;.</li>
+                <li>En el &lt;main&gt;: incluye un párrafo de introducción con &lt;p&gt;, y utiliza &lt;strong&gt;,
+                    &lt;em&gt;, y &lt;s&gt; dentro de los textos según sea necesario.</li>
+                <li>En el &lt;footer&gt;: podés repetir algunos estilos de texto o añadir un párrafo con
+                    contacto.</li>
+            </ul>
+            <h3>Ejemplo integrado:</h3>
+            <pre>
+                <code>
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+                        &lt;title&gt;Mi Primer Proyecto&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;
+                            &lt;h1&gt;Bienvenidos a Mi Proyecto&lt;/h1&gt;
+                            &lt;h2&gt;Este es un subtítulo en el header&lt;/h2&gt;
+                        &lt;/header&gt;
+                        &lt;nav&gt;
+
+                        &lt;/nav&gt;
+                        &lt;main&gt;
+                            &lt;p&gt;
+                                Este es un párrafo de introducción sobre el proyecto. Aquí podés usar 
+                                &lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;cursiva&lt;/em&gt;, y 
+                                &lt;s&gt;tachado&lt;/s&gt;.
+                            &lt;/p&gt;
+                        &lt;/main&gt;
+                        &lt;footer&gt;
+                            &lt;p&gt;Este es el pie de página con la información de contacto.&lt;/p&gt;
+                        &lt;/footer&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
         </section>
     </main>
     <footer>
-
+        <p>&copy; 2023 Aprendiendo Frontend. Todos los derechos reservados.</p>
+        <nav aria-label="Navegación secundaria">
+            <ul>
+                <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="/terminos">Términos de Servicio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
