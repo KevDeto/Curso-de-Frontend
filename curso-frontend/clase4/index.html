@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Nª4: Introduccion a CSS</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Pagina Principal</a></li>
+            </ul>
+        </nav>
+        <h1>Clase Nª4: Introduccion a CSS</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Temario:</h2>
+            <ol>
+                <li>Bases de CSS
+                    <ul>
+                        <li>Concepto y utilidad de CSS</li>
+                        <li>Separación de estilos y estructura HTML</li>
+                        <li>Reutilización de estilos</li>
+                    </ul>
+                </li>
+                <li>Cómo Incorporar CSS
+                    <ul>
+                        <li>CSS en linea</li>
+                        <li>CSS interno</li>
+                        <li>CSS externo</li>
+                    </ul>
+                </li>
+                <li>Selectores Básicos
+                    <ul>
+                        <li>Selector Universal</li>
+                        <li>Selector de Etiqueta</li>
+                        <li>Selector de Clase</li>
+                        <li>Selector de ID</li>
+                    </ul>
+                </li>
+                <li>Especificidad, Herencia, Cascada y Orden de las Reglas en CSS
+                    <ul>
+                        <li>Especificidad</li>
+                        <li>Herencia</li>
+                        <li>Cascada</li>
+                        <li>Orden de las Reglas</li>
+                    </ul>
+                </li>
+                <li>Atributo básicos de css
+                    <ul>
+                        <li>Color</li>
+                        <li>Tamaño</li>
+                        <li>Unidades de medida en css</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Bases del CSS</h2>
+            <P>
+                CSS (Cascading Style Sheets u “hojas de estilo en cascada” en español) es la herramienta
+                que usamos para dar vida a nuestras páginas web, dándoles color, formas y un diseño
+                atractivo. Sin CSS, nuestras páginas serían simples bloques de texto e imágenes. Su
+                principal función es controlar cómo se presentan los elementos HTML en el navegador.
+                Pero, ¿qué es esto de la "cascada"? Este término hace referencia a cómo se resuelven los
+                conflictos cuando varias reglas se aplican a un mismo elemento.
+            </P>
+            <h3>Importancia del CSS</h3>
+            <ul>
+                <li>Separación de “concerns”: CSS nos permite separar el contenido (HTML) de su
+                    presentación, lo que hace que todo sea más organizado. Imaginate tener todos los
+                    estilos mezclados con el HTML, ¡un lío total!</li>
+                <li>Reutilización de estilos: Lo mejor de CSS es que los estilos que definimos en un
+                    archivo pueden ser utilizados en varias páginas, logrando así un diseño consistente
+                    sin repetir código y dando un mismo criterio estético a nuestras páginas web.
+                    </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Cómo incorporar CSS?</h2>
+            <p>
+                Podemos agregar CSS a nuestras páginas de tres maneras diferentes. Algunas son
+                mejores que otras según la situación, pero te cuento sobre cada una de ellas.
+            </p>
+            <h3>CSS en línea</h3>
+            <p>
+                Es el más básico y fácil de aplicar, pero no es realmente recomendable porque “ensucia” el
+                HTML. Se usa con el atributo style dentro de una etiqueta.
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        &lt;p style="color: red; font-size: 14px;"&gt;Este párrafo es rojo y tiene un
+                        tamaño de catorce píxeles&lt;/p&gt;
+                    </code>
+                </pre>
+            </div>
+            <h3>CSS interno</h3>
+            <p>
+                Esta metodología la utilizaremos cuando queramos aplicar estilos sólo a una página
+                específica. Colocamos el CSS dentro de la etiqueta &lt;style&gt; en el &lt;head&gt; 
+                del documento.
+            </p>
+            <h4>Ejemplo</h4>
+            <div>
+                <pre>
+                    <code>
+                        &lt;head&gt;
+                            &lt;style&gt;
+                                h1 {
+                                    color: blue;
+                                    background-color: yellow;
+                                }
+                            &lt;/style&gt;
+                        &lt;/head&gt;
+                    </code>
+                </pre>
+            </div>
+            <h3>CSS externo</h3>
+            <p>
+                El mejor y más utilizado. Guardamos el CSS en un archivo aparte y lo vinculamos con el
+                HTML usando la etiqueta <link>. ¡Ideal para proyectos más grandes!
+            </p>
+            <h4>Ejemplo</h4>
+            <div>
+                <pre>
+                    <code>
+                        &lt;head&gt;
+                            &lt;link rel="stylesheet" href="css/styles.css"&gt;
+                        &lt;/head&gt;
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section>
+            <h2>Selectores básicos</h2>
+            <p>
+                En CSS, los selectores nos permiten aplicar estilos a los
+                elementos HTML que queramos, eligiendo específicamente a cuáles de
+                ellos afectaremos con los estilos especificados. Hay varias formas de asignar
+                estilos, a continuación explicaremos los más básicos.
+            </p>
+            <div>
+                <img src="../resources/images/selectores.png" alt="selectores basicos" width="600" height="400">
+            </div>
+            <h3>Selector universal</h3>
+            <p>
+                Este selector (*) afecta a todos los elementos de la página. Es útil para aplicar reglas
+                generales.
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                        }                           
+                    </code>
+                </pre>
+            </div>
+            <h3>Selector de etiqueta</h3>
+            <p>
+                Aplica estilos a todos los elementos de un tipo, por ejemplo, a todos los párrafos &lt;p&gt;.
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        p {
+                            color: black;
+                            font-size: 16px;
+                        }                           
+                    </code>
+                </pre>
+            </div>
+            <h3>Selector de clase</h3>
+            <p>
+                Si querés aplicar un estilo a varios elementos pero no a todos podés usar clases. Definimos
+                una clase con un punto (.) y la aplicamos a los elementos que queramos.
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        .highlight {
+                            background-color: yellow;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <h3>Selector de ID</h3>
+            <p>
+                Para un estilo único, usamos un ID. Solo puede aplicarse a un elemento específico. Lo
+                definimos con un numeral (#).
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        #main-title {
+                            font-size: 24px;
+                            color: green;
+                        }                           
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section>
+            <h2>Especificidad, herencia, cascada y orden de las reglas en CSS</h2>
+            <p>
+                A veces, varios estilos pueden estar aplicando al mismo elemento. En esos casos, el CSS
+                utiliza un sistema de especificidad y cascada para decidir cuál es la indicación de mayor
+                jerarquía que se aplicará sobre otras reglas que también estén operando.
+            </p>
+            <h3>Especificidad</h3>
+            <p>
+                Las reglas con mayor especificidad tienen más peso. Un estilo en línea (dentro de una
+                etiqueta) tendrá mayor prioridad que una clase o un ID.
+            </p>
+            <ul>
+                <li>Estilo en línea: style="color:red;"</li>
+                <li>ID: #id</li>
+                <li>Clase: .clase</li>
+            </ul>
+            <h3>Herencia</h3>
+            <p>
+                Algunas propiedades, como color y font-family, se heredan de los elementos “padres”.
+                Por ejemplo, si definís el color de un <div>, todos los elementos dentro de ese div
+                adoptarán ese color.
+            </p>
+            <h3>Cascada</h3>
+            <p>
+                Cuando varias reglas tienen la misma especificidad, se aplica la que esté más abajo en el
+                archivo CSS.
+            </p>
+            <h3>Orden de las reglas</h3>
+            <p>
+                Si dos reglas afectan a un mismo elemento y tienen la misma especificidad, se aplicará la
+                última.
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        p {
+                            color: blue;
+                        }
+
+                        p {
+                            color: red; /* Esta regla se aplicará porque está después */
+                        }                           
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section>
+            <h2>Atributos básicos en CSS</h2>
+            <h3>Color</h3>
+            <p>
+                El atributo color en CSS permite cambiar el color del texto de los elementos HTML. Hay
+                varias formas de especificar colores en CSS, y es importante entender cómo funcionan. Las
+                formas más comunes son:
+            </p>
+            <h4>Nombres de colores:</h4>
+            <p>
+                CSS reconoce muchos nombres de colores, como red, blue, black, 
+                white, etc. Este método es útil cuando quieres usar un color estándar.
+            </p>
+            <h5>Ejemplo:</h5>
+            <div>
+                <pre>
+                    <code>
+                        p {
+                            color: red;
+                        }                           
+                    </code>
+                </pre>
+            </div>
+            <h4>Valores hexadecimales:</h4>
+            <p>
+                Los valores hexadecimales se componen de seis dígitos que
+                representan los colores rojo, verde y azul (RGB). Por ejemplo, el rojo se escribe como
+                #FF0000, donde FF es el valor máximo para el rojo.
+            </p>
+            <h5>Ejemplo:</h5>
+            <div>
+                <pre>
+                    <code>
+                        h1 {
+                            color: #3498db; /* Azul claro */
+                        }
+                    </code>
+                </pre>
+            </div>
+            <h4>RGB y RGBA:</h4>
+            <p>
+                Con rgb() se pueden definir colores usando valores numéricos de 0 a 255
+                para los canales rojo, verde y azul. rgba() añade un valor de opacidad que va de 0
+                (totalmente transparente) a 1 (totalmente opaco).
+            </p>
+            <h5>Ejemplo:</h5>
+            <div>
+                <pre>
+                    <code>
+                        h2 {
+                            color: rgb(255, 99, 71); /* Tomate */
+                        }
+                        
+                        .semi-transparente {
+                            color: rgba(255, 99, 71, 0.5); /* Tomate semitransparente */
+                        }                            
+                    </code>
+                </pre>
+            </div>
+            <h3>Tamaño</h3>
+            <p>
+                El tamaño de los elementos HTML, como textos o bloques, se define en CSS mediante
+                diferentes propiedades como font-size (para el texto) o width y height (para el ancho y la 
+                altura de los contenedores).
+            </p>
+            <h4>font-size:</h4>
+            <p>
+                Controla el tamaño del texto. El valor puede definirse en px, em, rem, o %.
+            </p>
+            <h5>Ejemplo:</h5>
+            <div>
+                <pre>
+                    <code>
+                        p {
+                            font-size: 16px; /* Texto de 16 píxeles */
+                        }                           
+                    </code>
+                </pre>
+            </div>
+            <h4>width y height:</h4>
+            <p>
+                Definen el ancho y la altura de los elementos. También se pueden usar
+                diferentes unidades como px, %, vw, y vh.
+            </p>
+            <h5>Ejemplo:</h5>
+            <div>
+                <pre>
+                    <code>
+                        .contenedor {
+                            width: 100%; /* Ancho completo del contenedor padre */
+                            height: 50vh; /* La mitad de la altura del viewport */
+                        }
+                    </code>
+                </pre>
+            </div>
+            <h3>Unidades de medida en CSS</h3>
+            <p>
+                Las unidades de medida son esenciales para definir tamaños en CSS. Hay varios tipos de
+                unidades que podemos usar según la situación:
+            </p>
+            <h4>Unidades absolutas:</h4>
+            <p>
+                Son fijas y no cambian según el tamaño del viewport. Ejemplos: px
+                (píxeles), cm (centímetros), mm (milímetros), in (pulgadas), pt (puntos), pc (picas).
+            </p>
+            <h4>Unidades relativas:</h4>
+            <p>
+                Dependen del entorno y son más flexibles, adaptándose a diferentes
+                tamaños de pantalla. Ejemplos:
+            </p>
+            <h5>em:</h5>
+            <p>
+                Relativa al tamaño de la fuente del elemento padre. Si el padre tiene font-size: 16px,
+                1em es 16px.
+            </p>
+            <h5>rem:</h5>
+            <p>
+                Relativa al tamaño de la fuente raíz (&lt;html&gt;).
+            </p>
+            <h5>%:</h5>
+            <p>
+                Relativa al tamaño del contenedor padre.
+            </p>
+            <h5>Ejemplo:</h5>
+            <div>
+                <pre>
+                    <code>
+                        body {
+                            font-size: 16px;
+                        }
+
+                        h1 {
+                            font-size: 2em; /* 32px, porque 2 * 16px = 32px */
+                        }                           
+                    </code>
+                </pre>
+            </div>
+            <h4>Unidades flexibles (vw y vh):</h4>
+            <p>
+                Estas unidades son proporcionales al tamaño del viewport.
+            </p>
+            <h5>1vw:</h5>
+            <p>
+                1% del ancho del viewport.
+            </p>
+            <h5>1vh:</h5>
+            <p>
+                1% de la altura del viewport.
+            </p>
+            <h4>Ejemplo:</h4>
+            <div>
+                <pre>
+                    <code>
+                        .full-width {
+                            width: 100vw; /* Ocupa todo el ancho de la pantalla */
+                        }
+                    </code>
+                </pre>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
