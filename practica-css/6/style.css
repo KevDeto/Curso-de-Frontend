@@ -14,13 +14,13 @@ body {
 .lienzo {
     width: 1080px;
     height: 720px;
-    background-color: rgb(115, 156, 156);
+    background-color: transparent;
 }
 
 .lienzo .cuerpo {
     width: 100%;
     height: 80%;
-    background-color: blueviolet;
+    background-color: transparent;
 
     display: flex;
 }
@@ -28,15 +28,16 @@ body {
 .lienzo .cuerpo .brazo-izq {
     width: 25%;
     height: 35%;
-    background-color: rgba(246,152,176,255);
+    /*background-color: rgba(246,152,176,255);*/
+    background-image: radial-gradient(circle 150px at center 50px,rgba(246,152,176,255) 63%, black 160%);
 
     border: 15px solid black;
     border-radius: 50%;
     border-right: transparent;
     border-top: transparent;
 
-    translate: 120px -100px;
     align-self: center;
+    translate: 120px -100px;
     transform: rotate(72deg);
 
     z-index: 3;
@@ -45,9 +46,9 @@ body {
 .lienzo .torso {
     width: 65%;
     height: 100%;
-    background-color: rgba(246,152,176,255)
+    /*background-color: rgba(246,152,176,255);*/
+    background-image: radial-gradient(rgba(246,152,176,255) 63%, black 100%);
 
-    ;
 
     border: 15px solid black;
     border-radius: 50%;
@@ -55,9 +56,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     translate: 0 35px;
     z-index: 2;
 }
+
 .lienzo .torso .rostro{
     width: 600px;
     height: 300px;
@@ -72,14 +75,18 @@ body {
     width: 80px;
     height: 50px;
     background-color: rgba(242,114,127,255);
+    background-image: radial-gradient( rgba(242,114,127,255) 30%, rgba(246,152,176,255) 70%);
+
     border-radius: 50%;
 
     transform: rotate(10deg);
 }
+
 .lienzo .torso .rostro .ojo-izq{
     width: 75px;
     height: 190px;
     background-image: radial-gradient(ellipse 75px 200px at 25px -5px, black 55%, rgba(0,70,145,255) 90%);
+
     border: 15px solid black;
     border-radius: 50%;
 
@@ -89,11 +96,13 @@ body {
 
     translate: 5px -30px;
 }
+
 .lienzo .torso .rostro .ojo-izq::before{
     content: '';
     width: 35px;
     height: 70px;
     background-color: rgba(255,254,253,255);
+
     border-radius: 50%;
 }
 
@@ -101,11 +110,13 @@ body {
     width: 55px;
     height: 55px;
     background-image: radial-gradient(ellipse 55px 100px at 20px 80px,rgba(247,95,100,255) 50%, rgba(133,53,87,255) 65% );
+
     border: 8px solid black;
     border-top-left-radius: 25%;
     border-top-right-radius: 25%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+
     align-self: self-end;
 
     translate: 0px -80px;
@@ -124,6 +135,7 @@ body {
     width: 75px;
     height: 190px;
     background-image: radial-gradient(ellipse 75px 200px at 25px -5px, black 55%, rgba(0,70,145,255) 90%);
+
     border: 15px solid black;
     border-radius: 50%;
 
@@ -134,18 +146,21 @@ body {
     translate: -5px -30px;
 
 }
+
 .lienzo .torso .rostro .ojo-der::before{
     content: '';
     width: 35px;
     height: 70px;
     background-color: rgba(255,254,253,255);
+
     border-radius: 50%;
 }
 
 .lienzo .torso .rostro .mejilla-der{
     width: 80px;
     height: 50px;
-    background-color: rgba(242,114,127,255);
+    background-image: radial-gradient( rgba(242,114,127,255) 30%, rgba(246,152,176,255) 70%);
+
     border-radius: 50%;
 
     transform: rotate(-10deg);
@@ -155,6 +170,7 @@ body {
     width: 24%;
     height: 35%;
     background-color:  rgba(246,152,176,255);
+    background-image: radial-gradient(circle 150px at 90px 120px ,rgba(246,152,176,255) 63%, black 160%);
 
     border: 15px solid black;
     border-radius: 50%;
@@ -162,16 +178,18 @@ body {
     border-left: transparent;
     border-bottom: transparent;
 
-    translate: -130px 80px;
     align-self: center;
+    translate: -130px 80px;
     transform: rotate(58deg);
+
     z-index: 2;
 }
 
 .lienzo .piernas {
     width: 100%;
     height: 20%;
-    background-color: yellow;
+    background-color: transparent;
+
     display: flex;
     justify-content: center;
     align-items: start;
@@ -180,14 +198,15 @@ body {
 .lienzo .piernas::before {
     content: '';
     width: 500px;
-    height: 200px;
-    background-color: rgba(211,27,89,255);
+    height: 220px;
+    /*background-color: rgba(211,27,89,255);*/
+    background-image: radial-gradient(rgba(211,27,89,255) 40% ,black);
 
     border: 15px solid black;
     border-radius: 50%;
 
-    translate: 20% -135px;
-    transform: rotate(-15deg);
+    translate: 25% -175px;
+    transform: rotate(-35deg);
 
     z-index: 1;
 }
@@ -195,14 +214,15 @@ body {
 .lienzo .piernas::after {
     content: '';
     width: 500px;
-    height: 200px;
-    background-color: rgba(211,27,89,255);
+    height: 220px;
+    /*background-color: rgba(211,27,89,255);*/
+    background-image: radial-gradient(rgba(211,27,89,255) 40% ,black);
 
     border: 15px solid black;
     border-radius: 50%;
 
-    translate: -20% -135px;
-    transform: rotate(15deg);
+    translate: -25% -175px;
+    transform: rotate(35deg);
 
     z-index: 1;
 }
