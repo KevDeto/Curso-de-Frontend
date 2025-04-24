@@ -1,0 +1,209 @@
+:root {
+    --background-color: green;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(46, 45, 45);
+}
+
+.lienzo {
+    width: 600px;
+    height: 400px;
+    margin: 2rem auto;
+    display: flex;
+}
+
+.cabeza {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /*centra los items dependiendo el display*/
+}
+
+.menton {
+    width: 250px;
+    height: 230px;
+    background-image: linear-gradient(-140deg, green 15%, white 70%);
+    position: absolute;
+    z-index: 2;
+    border: 5px solid black;
+    border-radius: 50%;
+    translate: 92% 25%;
+}
+
+.escama {
+    width: 150px;
+    height: 150px;
+    background-color: var(--background-color);
+    border: 5px solid black;
+    border-radius: 50%;
+    translate: 50% -85%;
+}
+
+.boca {
+    width: 70px;
+    height: 100px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 50%;
+    border-color: black transparent black black;
+    translate: -15% 100%;
+    transform: rotate(12deg);
+}
+
+.boca::before {
+    content: '';
+    width: 40px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: red;
+    border: 5px solid red;
+    display: flex;
+    translate: 16% -10%;
+}
+
+.nariz {
+    width: 60%;
+    height: 60%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    translate: 55% -5%;
+    z-index: 4;
+}
+
+.punta {
+    --size: 100%;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--background-color);
+    border: 6px solid black;
+    border-radius: 50%;
+    display: flex;
+}
+
+.orificios {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    translate: 40px 10px;
+    display: flex;
+}
+
+.orificios::before {
+    content: '';
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    border: 7px solid black;
+    border-left: 15px;
+    border-color: black transparent transparent;
+    transform: rotate(17deg);
+}
+
+.orificios::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 7px solid black;
+    border-right: 15px;
+    border-color: black transparent transparent;
+    transform: rotate(-17deg);
+}
+
+.ojos {
+    width: 52%;
+    height: 60%;
+    background-color: transparent;
+    align-self: flex-start;
+    display: flex;
+    z-index: 3;
+    translate: 10%;
+}
+
+.parpado {
+    width: 140px;
+    height: 180px;
+    background-color: var(--background-color);
+    border: 6px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: end;
+    transform: rotate(10deg);
+}
+
+.parpado-der {
+    translate: -40px 20px;
+}
+
+.esclerotica {
+    width: 105px;
+    height: 140px;
+    background-color: white;
+    border: 8px solid black;
+    border-radius: 50%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.iris {
+    width: 40px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 0px 0px;
+    transition: all 0.3s;
+}
+
+.iris:hover {
+    translate: 60% 0%;
+}
+
+.pupila {
+    width: 20px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    translate: -5px 0px;
+}
+
+
+
+.espinas {
+    width: 20%;
+    height: 100%;
+}
+.uno,
+.dos,
+.tres {
+    width: 50%;
+    height: 15%;
+    background-color: red;
+    border: 5px solid black;
+}
+
+.uno {
+    translate: -75% 340%;
+    transform: rotate(30deg);
+}
+
+.dos {
+    translate: -85% 350%;
+    transform: rotate(70deg);
+}
+
+.tres {
+    translate: -160% 330%;
+    transform: rotate(105deg);
+}
+

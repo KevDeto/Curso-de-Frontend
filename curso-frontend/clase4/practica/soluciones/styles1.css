@@ -1,0 +1,71 @@
+/*styles1.css*/
+/*reset basico para evitar inconsistencias entre navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*estilos para el header*/
+header {
+    /*background-color: rgb(49, 49, 49);*/
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.8) 80%,
+            rgba(0, 0, 0, 0.5) 90%,
+            rgba(255, 255, 255, 0) 100%);
+    color: white;
+    /*1rem arriba/abajo 2rem izquierda/derecha*/
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    /*espacio "debajo" del header border: 1px solid #e3ff7f;*/
+    /*border: 1px solid #f8f688;*/
+    /*border-radius: 50px;*/
+}
+
+/*estilos para el footer*/
+footer {
+    background: linear-gradient(to top,
+            rgba(53, 74, 95, 1) 0%,
+            rgba(53, 74, 95, 0.8) 80%,
+            rgba(53, 74, 95, 0.5) 90%,
+            rgba(255, 255, 255, 0) 100%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    /*fijar al pie de pagina*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    padding: 0.5rem 1rem;
+}
+
+/*estilos para barra de navegacion*/
+.nav-list {
+    padding: 1rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    /*transicion suave para efectos hover*/
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    /* Color de fondo al pasar el mouse */
+    background-color: rgba(53, 74, 95);
+}

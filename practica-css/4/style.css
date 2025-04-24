@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lienzo{
+    width: 400px;
+    height: 400px;
+    margin: 2rem auto;
+
+    background: gray;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    width: 250px;
+    height: 250px;
+    background: black;
+    border-radius: 20%;
+    position: absolute;
+    top: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marca{
+    margin: 2rem auto;
+    color: white;
+    font-size: 60px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 0px;
+}
+
+.circulo {
+    width: 200px;
+    height: 200px;
+    background: green;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ondas h2 {
+    position: absolute;
+    height: 50px;
+    border-radius: 50%;
+    border: 12px solid black;
+    border-color: black transparent transparent transparent;
+    transform: rotate(6deg);
+    
+}
+
+.ondas h2::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    width: 9.5px;
+    height: 9.5px;
+    background-color: black;
+    top: -1.2px;
+    left: -0.2px;
+}
+
+
+.ondas .uno {
+    width: 180px;
+    top: 70px;
+    left: 15px;
+
+}
+
+.ondas .dos {
+    width: 160px;
+    top: 95px;
+    left: 23px;
+}
+.tres::after{
+    width: 19.5px;
+    height: 19.5px;
+    background-color: white;
+    top: 0px;
+    left: -0.2px;
+}
+.ondas .tres {
+    width: 130px;
+    top: 125px;
+    left: 35px;
+}
+

@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(41, 41, 41);
+
+}
+
+.lienzo {
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;  /* Esto centra el lienzo en la página */
+    position: relative;
+
+    display: flex;
+    justify-content: center; /*Centra horizontalmente*/
+    align-items: center; /*Centra verticalmente*/
+}
+
+.carita-feliz {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+}
+
+.carita-feliz::before,
+.carita-feliz::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    top:50px;
+}
+
+.carita-feliz::before{
+    left: 45px;
+}
+
+.carita-feliz::after{
+    right: 45px;
+}
+
+.boca {
+    position: absolute;
+    width: 150px;       /* Ancho de la sonrisa */
+    height: 150px;       /* Altura de la sonrisa */
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 4px solid black;  /* Línea inferior */
+    border-right: 4px solid transparent;  /* Transparente para crear curva */
+    border-left: 4px solid transparent;   /* Transparente para crear curva */
+    border-radius: 0 0 50% 50%;  /* Sólo redondeo inferior */
+    
+}
