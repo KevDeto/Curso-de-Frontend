@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Ejercicio Práctico #1 y #2</title>
 </head>
+
 <body>
-    <header>
+    <header class="header">
         <nav>
-            <ul>
+            <ul class="listas">
                 <li><a href="../../../index.html">Pagina Principal</a></li>
                 <li><a href="../../index.html">Clase #3</a></li>
                 <li><a href="../ejercicios.html">Practica #3</a></li>
             </ul>
         </nav>
-        <h1>Formulario de contacto:</h1>
+        <h1>Formulario de contacto</h1>
     </header>
     <main>
         <section>
-            <form action="https://formspree.io/f/mwplygob" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required><br>
-                <label for="correo">Correo electronico:</label>
-                <input type="email" name="correo" id="correo" placeholder="Ingrese su email" required><br>
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea name="mensaje" rows="4" cols="50" required></textarea><br>
-                <button type="submit">Enviar</button>
+            <form class="formulario" action="https://formspree.io/f/mwplygob" method="POST">
+                <div class="nombre">
+                    <label for="nombre">NOMBRE:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required><br>
+                </div>
+                <div class="correo">
+                    <label for="correo">EMAIL:</label>
+                    <input type="email" name="correo" id="correo" placeholder="Ingrese su email" required><br>
+                </div>
+                <div class="mensaje">
+                    <label for="mensaje">MENSAJE:</label><br>
+                    <textarea name="mensaje" rows="10" cols="50" required></textarea><br>
+                </div>
+                <button type="submit" class="boton">ENVIAR</button>
             </form>
         </section>
     </main>
 </body>
+
 </html>
