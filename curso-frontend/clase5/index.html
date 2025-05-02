@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase N° 5: Medidas, Colores, Fondos, Fuentes e Íconos</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Pagina Principal</a></li>
+            </ul>
+        </nav>
+        <h1>Clase N° 5: Medidas, Colores, Fondos, Fuentes e Íconos</h1>
+    </header>
+    <main>
+        <section class="lista-de-temas">
+            <h2>Temario:</h2>
+            <ol>
+                <li class="tema-uno">Unidades de medida en CSS
+                    <ul>
+                        <li>Unidades Absolutas</li>
+                        <li>Unidades Relativas</li>
+                        <li>Unidades Flexibles (vw y vh)</li>
+                    </ul>
+                </li>
+                <li class="tema-dos">Colores en CSS
+                    <ul>
+                        <li>Definición de Colores (Palabras clave, Hexadecimales, RGB y RGBA)</li>
+                        <li>Aplicación de Colores a Textos y Fondos</li>
+                    </ul>
+                </li>
+                <li class="tema-tres">Fondos en CSS
+                    <ul>
+                        <li>Color de Fondo</li>
+                        <li>Imagen de Fondo</li>
+                    </ul>
+                </li>
+                <li class="tema-cuatro">Fuentes y Tipografías
+                    <ul>
+                        <li>Propiedades Básicas</li>
+                        <li>Utilización de Google Fonts</li>
+                        <li>Incorporación de Google Fonts en un Proyecto</li>
+                    </ul>
+                </li>
+                <li class="tema-cinco">Íconos en CSS
+                    <ul>
+                        <li>Integración con Font Awesome y Flaticon</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section class="tema-uno">
+            <h2>1. Unidades de Medida en CSS</h2>
+            <p>
+                Las unidades de medida en CSS son esenciales para definir el tamaño de elementos
+                como textos, márgenes, paddings, y más. Vamos a ver las más comunes:
+            </p>
+            <div class="definiciones">
+                <article class="definicion-uno">
+                    <h3>Unidades Absolutas:</h3>
+                    <p>
+                        Estas unidades tienen un valor fijo y no cambian dependiendo del tamaño de la pantalla o el
+                        dispositivo. Son útiles para impresiones o diseños que no necesitan adaptarse. Tienen la
+                        desventaja de ser muy poco flexibles y no adaptarse fácilmente a los diferentes medios y
+                        por esto no suelen ser utilizadas.
+                    </p>
+                    <ul>
+                        <li><strong>px (píxeles)</strong>: Muy común, define el tamaño de los elementos en base a
+                            píxeles de
+                            pantalla.</li>
+                        <li><strong>cm (centímetros)</strong>: Ideal para medios impresos.</li>
+                        <li><strong>mm (milímetros)</strong>: Se utiliza también en impresiones.</li>
+                        <li><strong>pt (puntos)</strong>: Un punto equivale a 1/72 de pulgada.</li>
+                        <li><strong>in (pulgadas)</strong>: 1 pulgada equivale a 2.54 cm.</li>
+                    </ul>
+                    <div class="codigo-uno">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                .box {
+                                    100px; /* Ancho de 100 píxeles */
+                                    margin: 1cm; /* Margen de 1 centímetro */                                   
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+                <article class="definicion-dos">
+                    <h3>Unidades Relativas:</h3>
+                    <p>
+                        Las unidades relativas dependen del tamaño de otros elementos, lo que las hace perfectas
+                        para diseños responsivos.
+                    </p>
+                    <ul>
+                        <li><strong>em</strong>: Relativa al tamaño de la fuente del padre. Si la fuente es 16px,
+                            1em será igual a 16px.</li>
+                        <li><strong>rem (root em)</strong>: Similar a em, pero siempre relativa al tamaño de la
+                            fuente base del documento.</li>
+                        <li><strong>% (porcentaje)</strong> Relativo al tamaño del contenedor padre.</li>
+                    </ul>
+
+                    <table>
+                        <caption>
+                            La siguiente tabla te va a servir de ayuda para cuando utilices medidas relativas.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Unidad</th>
+                                <th>Significado</th>
+                                <th>Medida Aproximada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>em</strong>
+                                </td>
+                                <td>&lt;&lt;M&gt;&gt;</td>
+                                <td>1em = mitad de fuente establecida en navegador.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ex</strong></td>
+                                <td>&lt;&lt;x&gt;&gt; (0,5em aprox)</td>
+                                <td>1ex = mitad del tamaño de la fuente del navegador aproximadamente.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ch</strong></td>
+                                <td>&lt;&lt;zero width&gt;&gt;</td>
+                                <td>1ch = tamaño de ancho del cero (0).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>rem</strong></td>
+                                <td>&lt;&lt;root M&gt;&gt;</td>
+                                <td>1rem = tamaño fuente raiz.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>%</strong></td>
+                                <td>Porcentaje</td>
+                                <td>Relativa a herencia (contenedor padre)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="codigo-dos">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                body {
+                                    font-size: 16px;
+                                }
+                                h1 {
+                                    font-size: 2em; /* 32px */
+                                   }
+                                .box {
+                                    width: 50%; /* La mitad del ancho del padre */
+                                }                                   
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+                <article class="definicion-tres">
+                    <h3>Unidades Flexibles (vw y vh):</h3>
+                    <p>
+                        Estas unidades dependen del tamaño de la ventana gráfica (viewport), lo que permite
+                        crear diseños que se ajustan al tamaño de la pantalla.
+                    </p>
+                    <figure>
+                        <img src="../resources/images/unidades-flexibles.png" alt="unidades-flexibles-vw-y-vh">
+                    </figure>
+                    <ul>
+                        <li><strong>(viewport width)</strong>: 1vw equivale al 1% del ancho del viewport</li>
+                        <li><strong>vh (viewport height)</strong>: 1vh equivale al 1% de la altura del viewport.</li>
+                    </ul>
+                    <div class="codigo-tres">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                .full-width {
+                                    width: 100vw; /* Ocupa el 100% del ancho del viewport */
+                                }
+                                .half-height {
+                                    height: 50vh; /* Ocupa el 50% de la altura del viewport */
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tema-dos">
+            <h2>2. Colores en CSS</h2>
+            <p>
+                El manejo de colores en CSS es crucial para mejorar la estética de tu sitio. Podés definir
+                colores de varias maneras:
+            </p>
+            <div class="definiciones">
+                <article class="definicion-uno">
+                    <h3>Definición de colores:</h3>
+                    <ul>
+                        <li><strong>Palabras clave</strong>: Nombres de colores comunes como red, blue, green.</li>
+                        <li><strong>Hexadecimales</strong>: Definido por el signo # seguido de 6 dígitos. Ejemplo:
+                            #FF5733
+                            para un color naranja.</li>
+                        <li><strong>RGB (Red, Green, Blue)</strong>: Cada componente del color se define con valores de
+                            0 a
+                            255. Ejemplo: rgb(255, 87, 51) para el mismo naranja.</li>
+                        <li><strong>RGBA</strong>: Incluye un cuarto valor, la transparencia (alpha), que va de 0
+                            (transparente)
+                            a 1 (opaco). Ejemplo: rgba(255, 87, 51, 0.5).</li>
+                    </ul>
+                </article>
+                <article class="definicion-dos">
+                    <h3>Aplicación de colores texto y a fondos:</h3>
+                    <pre>
+                        <code>
+                            .text-color {
+                                color: #3498db; /* Azul mediante hexadecimal */
+                                background-color: rgba(46, 204, 113, 0.7); /* Verde semitransparente
+                               */
+                            }                               
+                        </code>
+                    </pre>
+                </article>
+            </div>
+        </section>
+        <section class="tema-tres">
+            <h2>3. Fondos en CSS</h2>
+            <p>
+                Los fondos son esenciales para darle personalidad a tu sitio. Podés aplicar colores o
+                imágenes a cualquier elemento.
+            </p>
+            <div class="definiciones">
+                <article class="definicion-uno">
+                    <h3>Color de Fondo:</h3>
+                    <p>
+                        Definí un color de fondo con la propiedad background-color.
+                    </p>
+                    <div class="ejemplo-cuatro">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                .header {
+                                    background-color: #2c3e50; /* Fondo oscuro */
+                                }   
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+                <article class="definicion-dos">
+                    <h3>Imagen de Fondo:</h3>
+                    <p>
+                        Utilizá la propiedad background-image para aplicar una imagen. Es recomendable ajustar
+                        también el tamaño, la repetición y la posición de la imagen.
+                    </p>
+                    <div class="ejemplo-cinco">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                .banner {
+                                    background-image: url('banner.jpg');
+                                    background-size: cover; /* La imagen cubre todo el contenedor */
+                                    background-position: center; /* Centra la imagen */
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tema-cuatro">
+            <h2>4. Fuentes y Tipografías</h2>
+            <div class="definiciones">
+                <article class="definicion-uno">
+                    <h3>Propiedades Basicas</h3>
+                    <p>
+                        La tipografía es uno de los pilares del diseño web. Las propiedades más comunes son:
+                    </p>
+                    <ul>
+                        <li><strong>font-size</strong>: Define el tamaño del texto.</li>
+                        <li><strong>font-style</strong>: Define el estilo (normal, italic, oblique).</li>
+                        <li><strong>font-family</strong>: Especifica la familia tipográfica (Arial, sans-serif, etc.)
+                        </li>
+                        <li><strong>font-weight</strong>: Controla el grosor del texto (normal, bold, o valores
+                            numéricos
+                            de 100 a 900).</li>
+                    </ul>
+                    <div class="ejemplo-cinco">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                h1 {
+                                    font-family: 'Arial', sans-serif;
+                                    font-size: 2rem;
+                                    font-weight: bold;
+                                    font-style: italic;
+                                }                                   
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+                <article class="definicion-dos">
+                    <h3>Incorporación de Google Fonts</h3>
+                    <p>Google Fonts ofrece una gran variedad de fuentes gratuitas que podés usar en tu proyecto.
+                        Te explico cómo hacerlo:
+                    </p>
+                    <div class="pasos">
+                        <div>
+                            <p>Paso 1: Ir a Google Fonts, buscar la fuente que te guste y copiar el enlace que te
+                                proporcionan.
+                            </p>
+                        </div>
+                        <div>
+                            <p>Paso 2: Incluir el enlace en el &lt;head&gt; de tu HTML.
+                            </p>
+                            <pre>
+                                <code>
+                                    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+                                     rel="stylesheet"&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <div>
+                            <p>Paso 3: Aplicar la fuente en tu CSS.
+                            </p>
+                            <pre>
+                                <code>
+                                    body {
+                                        font-family: 'Roboto', sans-serif;
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tema-cinco">
+            <h2>5. Íconos en CSS</h2>
+            <p>
+                Los íconos son una excelente manera de mejorar la usabilidad y el diseño de tu sitio.
+                Podés integrarlos fácilmente con bibliotecas como Font Awesome o Flaticon.
+            </p>
+            <div class="definiciones">
+                <article class="definicion-uno">
+                    <h3>Font Awesome:</h3>
+                    <p>Es una de las bibliotecas más populares. Solo necesitas agregar un enlace en tu HTML y
+                        usar las clases que proporciona.
+                    </p>
+                    <div class="ejemplo-ocho">
+                        <h4>Ejemplo:</h4>
+                        <pre>
+                            <code>
+                                &lt;link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/
+                                font-awesome/6.0.0-beta3/css/all.min.css"&gt;
+                                &lt;i class="fas fa-shopping-cart"&gt;&lt;/i&gt; &lt;!-- Icono de carrito de compras--&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+                <article class="definicion-dos">
+                    <h3>Flaticon:</h3>
+                    <p>Si preferís descargar los íconos, Flaticon es una gran opción. Solo descargás el ícono y lo
+                        agregás como una imagen.
+                    </p>
+                    <div class="ejemplo-nueve">
+                        <pre>
+                            <code>
+                                &lt;img src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png"
+                                alt="Ícono de libro" width="50"&gt;&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
